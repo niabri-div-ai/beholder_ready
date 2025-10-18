@@ -8,7 +8,9 @@ router.get('/reports/:quote', ordersController.getOrdersReport);
 
 router.get('/:orderId/:clientOrderId', ordersController.getOrder);
 
-router.get('/:symbol?', ordersController.getOrders);
+router.get('/:symbol', ordersController.getOrders);
+
+router.get('/', ordersController.getOrders);
 
 router.post('/:id/sync', ordersController.syncOrder);
 

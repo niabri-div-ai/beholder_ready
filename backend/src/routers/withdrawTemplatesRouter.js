@@ -4,7 +4,9 @@ const withdrawTemplatesController = require('../controllers/withdrawTemplatesCon
 
 router.delete('/:id', withdrawTemplatesController.deleteWithdrawTemplate);
 
-router.get('/:coin?', withdrawTemplatesController.getWithdrawTemplates);
+router.get('/:coin', withdrawTemplatesController.getWithdrawTemplates);
+
+router.get('/', withdrawTemplatesController.getWithdrawTemplates);
 
 router.patch('/:id', withdrawTemplatesController.updateWithdrawTemplate);
 
